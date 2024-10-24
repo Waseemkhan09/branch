@@ -1,0 +1,42 @@
+sudo apt-get install curl
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o
+"awscliv2.zip"
+sudo apt install unzip
+sudo unzip awscliv2.zip
+sudo ./aws/install
+aws --version
+
+create access key in aws
+save access key
+
+aws configure
+create key pair in aws
+create a directory go to directory 
+sudo nano variables.tf
+
+variable "aws_region"
+{
+description = "AWS region"
+default = "Global"
+}
+
+variable "key_name" {
+  description = "AWS key"
+default = "terraform"
+}
+
+variable "instance_type" {
+description = "instance_type"
+default = "t2.micro"
+}
+
+select and copy AMI ID
+sudo nano main.tf
+change ami in code 
+save file 
+terraform init
+terraform plan
+terraform apply
+go to aws to see instances created
+terraform destroy 
+
